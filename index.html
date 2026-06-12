@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday Mahek</title>
+<style>
+body{margin:0;font-family:Arial;background:#fff0f5;text-align:center}
+.page{display:none;padding:25px}.active{display:block}
+button{padding:12px 20px;border:none;border-radius:20px;background:#ffb6c1}
+input{font-size:22px;padding:8px}
+img{max-width:90%;max-height:60vh;border-radius:15px}
+</style></head><body>
+
+<div id="p1" class="page active">
+<h1>🔐 For My Kuchhuu Puchuuu 🌷💖</h1>
+<p>Enter Secret Code</p>
+<input id="code" type="password"><br><br>
+<button onclick="check()">Unlock</button>
+</div>
+
+<div id="p2" class="page"><h1>🎂 Happy Birthday Mera Bachha 🌷💖</h1>
+<p>Aaj mere bachha ka special day hai ❤️</p>
+<button onclick="show(3)">Next</button></div>
+
+<div id="p3" class="page"><h1>🕯️ Make A Wish</h1>
+<p>Close your eyes and make a wish ✨</p>
+<button onclick="show(4)">Blow Candles</button></div>
+
+<div id="p4" class="page">
+<h1>📸 Memories ❤️</h1>
+<img id="slide" src="1000237039.jpg">
+<p id="cap"></p>
+<button onclick="show(5)">Open Letter 💌</button>
+</div>
+
+<div id="p5" class="page">
+<h1>💌 To My Rashmalai 🌷💖</h1>
+<p style="max-width:800px;margin:auto">
+Happy Birthday Meri Rashmalai ❤️<br><br>
+Tum meri life ki sabse pyari khushi ho. Tumhari smile meri weakness hai aur tumhari khushi meri priority hai. 🥺💖
+</p><br>
+<button onclick="show(6)">Surprise ⭐</button>
+</div>
+
+<div id="p6" class="page">
+<h1>⭐ Perfect - Ed Sheeran</h1>
+<p>I found a love... I found a beautiful girl 🌷💖</p>
+<button onclick="show(7)">Final Message</button>
+</div>
+
+<div id="p7" class="page">
+<h1>🎂 Happy Birthday Mahek 🌷💖</h1>
+<p style="max-width:900px;margin:auto">
+Aaj ka din mere liye bhi utna hi special hai jitna aapke liye, kyunki aaj us insaan ka din hai jo meri life ka sabse khoobsurat hissa ban gaya hai. 🌷💖✨<br><br>
+Aap sirf ek insaan nahi ho, aap meri feelings, meri khushiyon aur meri muskurahat ki wajah ho. 🥺💖<br><br>
+Aapki presence mere liye ek comfort hai, ek sukoon hai. 🌷💖<br><br>
+Aapki har ek baat, aapki smile 😊💖, aur gussa hone ke baad wali wo cute si shakal 🫣😅💖... sab kuch mere dil ke bahut kareeb hai.<br><br>
+Aapki happiness mere liye sabse important hai. 🌷💖<br><br>
+13 June — The day my favourite person was born. 🌷💖✨<br><br>
+— Yours Forever, Vaibhav 🌷💖
+</p></div>
+
+<script>
+const imgs=["1000237039.jpg","1000237040.jpg","1000237041.jpg","1000237042.jpg","1000237049.jpg","1000237050.jpg","1000237043.jpg","1000237045.jpg","1000237046.jpg","1000237051.jpg","1000237047.jpg"];
+const caps=["The moon was beautiful that night 🌙❤️","One picture, a thousand memories ❤️","No matter where life takes us ❤️","You make every moment beautiful ✨","My favourite place is next to you 💖"];
+let i=0;
+setInterval(()=>{let s=document.getElementById('slide'); if(!s)return; i=(i+1)%imgs.length; s.src=imgs[i]; document.getElementById('cap').innerText=caps[i%caps.length];},2500);
+function show(n){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active')); document.getElementById('p'+n).classList.add('active');}
+function check(){if(document.getElementById('code').value==='1306')show(2);else alert('Wrong Code');}
+</script>
+</body></html>
