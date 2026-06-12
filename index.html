@@ -41,15 +41,26 @@ Tum meri life ki sabse pyari khushi ho. Tumhari smile meri weakness hai aur tumh
 </div>
 
 <div id="p6" class="page">
-<h1>⭐ Perfect - Ed Sheeran</h1>
-<p>I found a love... I found a beautiful girl 🌷💖</p>
-<button onclick="show(7)">Final Message</button>
+<h1>⭐ Perfect - Ed Sheeran 🌷💖</h1>
+
+<p>
+I found a love... ❤️<br>
+I found a beautiful girl, beautiful and sweet 🌷💖
+</p>
+
+<audio id="song" controls autoplay>
+  <source src="perfect.mp3" type="audio/mpeg">
+</audio>
+
+<br><br>
+
+<button onclick="show(7)">Final Message 💌</button>
 </div>
 
 <div id="p7" class="page">
 <h1>🎂 Happy Birthday Mahek 🌷💖</h1>
 <p style="max-width:900px;margin:auto">
-Aaj ka din mere liye bhi utna hi special hai jitna aapke liye, kyunki aaj us insaan ka din hai jo meri life ka sabse khoobsurat hissa ban gaya hai. 🌷💖✨<br><br>
+Aaj ka din mere liye bhi utna hi special hai jitna aapke liye, kyunki aaj us insaan ka hai jo meri life ka sabse khoobsurat hissa ban gaya hai. 🌷💖✨<br><br>
 Aap sirf ek insaan nahi ho, aap meri feelings, meri khushiyon aur meri muskurahat ki wajah ho. 🥺💖<br><br>
 Aapki presence mere liye ek comfort hai, ek sukoon hai. 🌷💖<br><br>
 Aapki har ek baat, aapki smile 😊💖, aur gussa hone ke baad wali wo cute si shakal 🫣😅💖... sab kuch mere dil ke bahut kareeb hai.<br><br>
@@ -63,7 +74,17 @@ const imgs=["1000237039.jpg","1000237040.jpg","1000237041.jpg","1000237042.jpg",
 const caps=["The moon was beautiful that night 🌙❤️","One picture, a thousand memories ❤️","No matter where life takes us ❤️","You make every moment beautiful ✨","My favourite place is next to you 💖"];
 let i=0;
 setInterval(()=>{let s=document.getElementById('slide'); if(!s)return; i=(i+1)%imgs.length; s.src=imgs[i]; document.getElementById('cap').innerText=caps[i%caps.length];},2500);
-function show(n){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active')); document.getElementById('p'+n).classList.add('active');}
+function show(n){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ document.getElementById('p'+n).classList.add('active');
+
+ if(n===6){
+   const song=document.getElementById('song');
+   if(song){
+     song.play().catch(()=>{});
+   }
+ }
+}
 function check(){if(document.getElementById('code').value==='1306')show(2);else alert('Wrong Code');}
 </script>
 </body></html>
